@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form method="GET" action="/profitable_crop">
+<!--<input id="crop_year" type="text" name="crop_year">-->
+<input id="area" type="number" step="1" name="area">
+   <input id="yield" type="text"  name="yield">
+<input id="state_name" type="text" name="state_name">
+<input id="district_name" type="text" name="district_name">
+<input id="season" type="text" name="season">
+    <input id="latitude" type="text" name="latitude">
+    <input id="longitude" type="text" name="longitude">
+<!--<input id="rainfall" type="text" name="rainfall">-->
+<input type="submit">
+<!--<button id="submit" type="button" onclick="util.predict_class()">Submit</button>-->
+<h1><i>{{your_out}}</i></h1>
+<p id="output"></p>
+</form>
+ <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script>
+     $("submit").click(function(event)){
+        let message = {
+            crop_year: $("crop_year").val()
+            area: $("area").val()
+            state_name: $("state_name").val()
+            district_name: $("district_name").val()
+            crop: $("crop").val()
+            season: $("season").val()
+            rainfall: $("rainfall").val()
+        }
+        $.post("http://127.0.0.1:5000/" , JSON.stringify(message) , function(response){
+            $("#output").text(response.output);
+            console.log(response);
+        });
+     });
+ </script>-->
+
+</body>
+</html>
