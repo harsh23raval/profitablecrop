@@ -16,10 +16,10 @@ global df, production_crop, june_sep_rainfall
 
 app = Flask(__name__)
 
-with open('artifacts/crop_predictor_final_tperha.pickle', 'rb') as f:
+with open('crop_predictor_final_tperha.pickle', 'rb') as f:
     __model = pickle.load(f)
 
-with open("artifacts/columnsin_crop_predictor_tperha.json", 'r') as f:
+with open("columnsin_crop_predictor_tperha.json", 'r') as f:
     __data_columns = json.load(f)['data_columns']
 
 #with open('artifacts/yield_june_to_sep_rainfall.pickle', 'rb') as f:
