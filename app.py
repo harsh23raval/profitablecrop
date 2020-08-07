@@ -16,11 +16,7 @@ global df, production_crop, june_sep_rainfall
 
 app = Flask(__name__)
 
-with open('crop_predictor_final_tperha.pickle', 'rb') as f:
-    __model = pickle.load(f)
 
-with open("columnsin_crop_predictor_tperha.json", 'r') as f:
-    __data_columns = json.load(f)['data_columns']
 
 #with open('artifacts/yield_june_to_sep_rainfall.pickle', 'rb') as f:
     #__yieldmodel = pickle.load(f)
@@ -37,13 +33,17 @@ def home():
 def predict():
     global crop_out, state_name, area, district_name, season
     global prediction, production_crop, roundoff
-    global __data_columns, june_sep_rainfall
-    global __model
+    global  june_sep_rainfall
     global y
     global d
     global wjdata
     global main, district, df
     global profitable_crop
+    with open('crop_predictor_final_tperha.pickle', 'rb') as f:
+        __model = pickle.load(f)
+
+    with open("columnsin_crop_predictor_tperha.json", 'r') as f:
+        __data_columns = json.load(f)['data_columns']
     d = {}
 
     if request.method == 'GET':
