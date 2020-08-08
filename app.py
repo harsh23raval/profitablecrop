@@ -2,7 +2,7 @@ from flask import request
 from flask import jsonify
 from flask import Flask, redirect, render_template
 import json
-mport pickle5 as pickle
+import pickle5 as pickle
 import numpy as np
 import requests
 import flask
