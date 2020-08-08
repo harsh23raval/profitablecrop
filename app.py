@@ -2,7 +2,7 @@ from flask import request
 from flask import jsonify
 from flask import Flask, redirect, render_template
 import json
-import pickle
+mport pickle5 as pickle
 import numpy as np
 import requests
 import flask
@@ -39,6 +39,8 @@ def predict():
     global wjdata
     global main, district, df
     global profitable_crop
+    global f
+    
     with open('crop_predictor_final_tperha.pickle', 'rb') as f:
         __model = pickle.load(f)
 
