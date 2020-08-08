@@ -41,9 +41,9 @@ def predict():
     global profitable_crop
     global f
     
-    with open('crop_predictor_final_tperha.pickle', 'rb') as f:
+    with open("crop_predictor_final_tperha.pickle", 'r') as f:
         __model = pickle.load(f)
-        f.close()
+        #f.close()
 
     with open("columnsin_crop_predictor_tperha.json", 'r') as f:
         __data_columns = json.load(f)['data_columns']
