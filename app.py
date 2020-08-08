@@ -42,7 +42,8 @@ def predict():
     global f
     
     with open('crop_predictor_final_tperha.pickle', 'rb') as f:
-        __model = pickle.load(f)
+        __model = pickle.load(f,encoding='latin1')
+        f.close()
 
     with open("columnsin_crop_predictor_tperha.json", 'r') as f:
         __data_columns = json.load(f)['data_columns']
