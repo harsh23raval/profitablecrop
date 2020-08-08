@@ -41,7 +41,7 @@ def predict():
     global profitable_crop
     global f
     
-    with open("crop_predictor_final_tperha.pickle", 'r') as f:
+    with open("crop_predictor_final_tperha.pickle", 'rb') as f:
         __model = pickle.load(f)
         #f.close()
 
