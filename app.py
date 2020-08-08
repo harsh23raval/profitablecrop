@@ -8,7 +8,7 @@ import requests
 import flask
 import pandas as pd
 import datetime
-import joblib
+#import joblib
 
 global crop_year, area, state_name, district_name, crop, season, rainfall, prediction, __data_columns, __model
 global main, crop_out, d, roundoff
@@ -17,7 +17,10 @@ global df, production_crop, june_sep_rainfall
 
 app = Flask(__name__)
 
-__model = joblib.load("artifacts/probitablecrop.pkl")
+#__model = joblib.load("artifacts/probitablecrop.pkl")
+infile = open("crop_predictor_final_tperha.pickle",'rb')
+__model = pickle.load(infile)
+infile.close()
 #with open('artifacts/crop_predictor_final_tperha.pickle', 'rb') as f:
     #__model = pickle.load(f)
 
